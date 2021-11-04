@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+}
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/***************************************   HEADER   ***************************************/
+.header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 95px;
+    padding: 0 60px;
+    background: url(../media/img/jonathan-weiss-1wT1EcGXKBk-unsplash-cropped.png);
+    background-position: top;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    z-index: 999;
+}
+.header-overlay{
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+.header-logo-container{
+    flex-direction: column;
+    height: 70px;
+    width: 77.02px;
+}
+
+
+
+
+/* 
+||||| LOGO |||||
+*/ 
+.header-logo-img{               
+    width: 40px;
+    align-items: center;
+    margin-left: -500px;
+    animation-name: slidingLogoAnimation;   /*'''animation'''*/
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    border-radius: 50%;
+}
+@keyframes slidingLogoAnimation{
+    0% {margin-left: -500px;}
+    50% {margin-left: 40px;}
+    70% {margin-left: 0px;}
+    90% {margin-left: 30px;}
+    100% {margin-left: 20px;}
+}
+
+.header-logo-img:hover{
+    transition: 0.5s;
+    border: 1px solid orangered;
+    width: 40.4px;
+}
+.header-logo-text{
+    color: transparent;
+    font-family: 'jokerman';
+    font-size: 20px;
+    animation-name: appearingLogoTextAnimation; /*'''animation'''*/
+    animation-delay: 1.3s;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    flex-wrap: nowrap;
+}
+@keyframes appearingLogoTextAnimation{
+    0% {color: transparent;}
+    100% {color: black;}
+}
+
+
+
+
+/* 
+||||| LINKS |||||
+*/ 
+.header-links{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.header-links a{
+    margin-left: 20px;
+    white-space: nowrap; 
+}
+@media (max-width: 600px){ 
+    .header{
+        overflow-x: auto;
+        padding: 0px 60px;
+        animation-name: headerLogoSlideIn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes headerLogoSlideIn {
+        0% {padding: 0px 60px}
+        100% {padding: 0px 10px}
+    }
+    .header-links{
+        flex-direction: column;
+    }
+    .header-booking-link{
+        padding: 5px 0px;
+    }
+    .header-links a:hover{
+        animation-name: linkEffect;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+
+    }
+    @keyframes linkEffect{
+        0% {transform: scale(100%); color: black;}
+        100% {transform: scale(105%); color: orangered;}
+    }
+}
+
+
+
+
+/* 
+||||| @MEDIA |||||
+*/ 
+@media (min-width: 600px){
+    .header{
+        padding: 0px 10px;
+        animation-name: headerLogoSlideOut;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes headerLogoSlideOut {
+        0% {padding: 0px 10px}
+        100% {padding: 0px 60px}
+    }
+/*
+'''animation''' HOME-LINK
+*/
+    .header-home-link:hover{
+        animation-name: homeLinkEffect;
+        animation-timing-function: linear;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        border-radius: 15%;
+    }
+    @keyframes homeLinkEffect{
+        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
+        100% {transform: scale(106%); border-bottom: 1px solid orangered;}
+    }
+/*
+'''animation''' BOOKING-LINK
+*/
+    .header-booking-link:hover{
+        animation: bookingLinkEffect;
+        animation-timing-function: linear;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        border-radius: 15%;
+    }
+    @keyframes bookingLinkEffect{
+        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
+        100% {transform: scale(103%); border-bottom: 1px solid orangered;}
+    }
+/*
+'''animation''' ABOUT-LINK
+*/
+    .header-about-link:hover{
+        animation: aboutLinkEffect;
+        animation-timing-function: linear;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        border-radius: 15%;
+    }
+    @keyframes aboutLinkEffect{
+        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
+        100% {transform: scale(105%); border-bottom: 1px solid orangered;}
+    }
+}
