@@ -698,35 +698,24 @@ opacity: 1;
 }
 
 
-
-.about-wrapper {
-    margin-left: -5000px;
-    animation-name: left-slide-in;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-   }
-
-@keyframes left-slide-in {
-    from {
-        margin-left: -5000px
+@media (min-width: 600px){
+    .about-wrapper {
+        margin-left: -5000px;
+        animation-name: left-slide-in;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
     }
-    to {
-        margin-left: 0;
+
+    @keyframes left-slide-in {
+        from {
+            margin-left: -5000px
+        }
+        to {
+            margin-left: 0;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
