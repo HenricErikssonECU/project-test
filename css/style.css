@@ -154,8 +154,8 @@ font-family: Arial, Helvetica, sans-serif;
         border-radius: 15%;
     }
     @keyframes homeLinkEffect{
-        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
-        100% {transform: scale(106%); border-bottom: 1px solid red;}
+        0% {transform: scale(100%); border-bottom: 2px solid transparent;}
+        100% {transform: scale(106%); border-bottom: 2px solid white;}
     }
 /*
 '''animation''' BOOKING-LINK
@@ -168,8 +168,8 @@ font-family: Arial, Helvetica, sans-serif;
         border-radius: 15%;
     }
     @keyframes bookingLinkEffect{
-        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
-        100% {transform: scale(103%); border-bottom: 1px solid red;}
+        0% {transform: scale(100%); border-bottom: 2px solid transparent;}
+        100% {transform: scale(103%); border-bottom: 2px solid white;}
     }
 /*
 '''animation''' ABOUT-LINK
@@ -182,8 +182,8 @@ font-family: Arial, Helvetica, sans-serif;
         border-radius: 15%;
     }
     @keyframes aboutLinkEffect{
-        0% {transform: scale(100%); border-bottom: 0px solid transparent;}
-        100% {transform: scale(105%); border-bottom: 1px solid red;}
+        0% {transform: scale(100%); border-bottom: 2px solid transparent;}
+        100% {transform: scale(105%); border-bottom: 2px solid white;}
     }
 }
 
