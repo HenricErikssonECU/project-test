@@ -70,17 +70,26 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     animation-name: appearingLogoTextAnimation; /*'''animation'''*/
     animation-delay: 1.3s;
-    animation-duration: 1.4s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     flex-wrap: nowrap;
     text-align: center;
+    border-bottom: 1px solid transparent;
+
 }
 @keyframes appearingLogoTextAnimation{
     0% {color: transparent;}
+    55% {color: white;}
+    66% {border-bottom: 1px solid rgb(243, 151, 102);}
+    100% {color: white; border-bottom: 1px solid transparent;}
+}
+/*
+@keyframes appearingLogoTextAnimation{
+    0% {color: transparent; box-shadow: 0px 0px 0px 0px;}
+    50% {box-shadow: 0px 2px 2px 0px #d45f11;}
     100% {color: white;}
 }
-
-
+*/
 
 
 /* 
@@ -111,7 +120,10 @@ font-family: Arial, Helvetica, sans-serif;
     .header-links{
         flex-direction: column;
     }
-    .header-booking-link{
+    .header-links a{
+        margin: 0;
+    }
+    .header-about-link{
         padding: 5px 0px;
     }
     .header-links a:hover{
@@ -123,7 +135,7 @@ font-family: Arial, Helvetica, sans-serif;
     }
     @keyframes linkEffect{
         0% {transform: scale(100%); color: white;}
-        100% {transform: scale(105%); color: red;}
+        100% {transform: scale(105%); color: rgb(243, 151, 102);}
     }
 }
 
