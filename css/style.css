@@ -23,12 +23,12 @@ font-family: Arial, Helvetica, sans-serif;
     top: 0;
     height: 95px;
     padding: 0 60px;
-    background-color: white;
+    background-color: rgb(46, 46, 46);
     box-shadow: 0px 2px 10px 0px #8f8f8f;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
-    z-index: 999;
+    z-index: 1999;
 }
 
 .header-logo-container{
@@ -61,8 +61,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-logo-img:hover{
-    transition: 0.5s;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 0, 0);
     width: 40.4px;
 }
 .header-logo-text{
@@ -77,7 +76,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 @keyframes appearingLogoTextAnimation{
     0% {color: transparent;}
-    100% {color: black;}
+    100% {color: white;}
 }
 
 
@@ -94,6 +93,7 @@ font-family: Arial, Helvetica, sans-serif;
 .header-links a{
     margin-left: 20px;
     white-space: nowrap; 
+    color: white;
 }
 @media (max-width: 600px){ 
     .header{
@@ -121,7 +121,7 @@ font-family: Arial, Helvetica, sans-serif;
 
     }
     @keyframes linkEffect{
-        0% {transform: scale(100%); color: black;}
+        0% {transform: scale(100%); color: white;}
         100% {transform: scale(105%); color: red;}
     }
 }
@@ -191,6 +191,9 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 /***************************************   HOME   ***************************************/
+
+
+
 #hero-section {
     margin-top: 80px;
     position: relative;
@@ -512,18 +515,20 @@ hr{
 bottom: 40%;
 opacity: 1;
 }
+
 @media screen and  (max-width: 770px){
-    .single-service{
+
+    .testimonial-col{
+
         flex-basis: 100%;
+
         margin-bottom: 30px;
-    }
-    .service-desc p{
-        font-size: 12px;
-    }
-    hr{
-        margin: 5px auto;
+
     }
 
+    .testimonial-col p{
+        font-size: 11px;
+    }
 }
 
 /* ------------------------------- */
@@ -550,8 +555,11 @@ opacity: 1;
     border-radius: 5px;
     box-shadow: 0 10px 20px 3px #09131114;
     cursor: pointer;
-
+    transition: 0.5;
 }
+
+
+
 .user{
     display: flex;
     padding-bottom: 20px;
@@ -581,14 +589,14 @@ opacity: 1;
     text-align: initial;
     font-size: 18px;
     color: #009688;
+    overflow: auto;
    
     
    
     
 }
 .testimonial-col:hover{
-    
-    transition: width 1s 0.5s linear;
+    transform: translateY(-10px);
 }
 
 
@@ -614,6 +622,7 @@ opacity: 1;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    min-height: calc(100vh - 95px);
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../media/img/pexels-background-1813272.jpg");
@@ -726,8 +735,7 @@ opacity: 1;
 /***************************************   FOOTER   ***************************************/
 footer {
     box-shadow: 0px 5px 8px 0px #f2f2f2;
-    background-color: rgb(128, 9, 9);
-    margin-bottom: 10px;
+    background-color: rgb(46, 46, 46);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -781,6 +789,9 @@ footer {
       justify-content: center;
       z-index: 999;
   }
+  .social-other a{
+      color: white;
+  }
 
   .social-other a:hover{
     color: red;
@@ -812,6 +823,7 @@ footer {
       font-size: 10px;
       margin-top: 10px;
       margin-bottom: 10px;
+      color: white;
   }
   
   #Tel {
